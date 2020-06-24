@@ -72,7 +72,7 @@
 		html,
 		body {
 		  height: 100%;
-		  background-image: url("../chess.jpg");
+		  background-color: #333;
 		  
 		}
 		
@@ -160,19 +160,45 @@
     <div class="inner">
       <h3 class="masthead-brand">Chess Master</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/sobre">Sobre</a>
-        <a class="nav-link" href="/contato">Contato</a>
+        <a class="nav-link active" href="/contato">Contato</a>
       </nav>
     </div>
   </header>
   <main role="main" class="inner cover">
-    <h1 align="center" class="cover-heading">Mestre Nacional Eduardo Baranowski.</h1>
-    <h2 class="cover">Mestre da Confederação Brasileira de Xadrez.</h2>
-    <p class="lead">A disposição para treinamento e divulgação do xadrez brasileiro.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Entre em Contato</a>
-    </p>
+  <br>
+  <br>
+  <div class="jumbotron">
+  
+<div class="container text-center">
+
+  <h1 style="color:black;" class="display-4">Contato</h1>  
+  <hr class="my-4">
+  <p style="color:black;" class="lead">Deseja tirar dúvidas ou organizar eventos? Entre em contato preenchendo os dados do formulário. </p>
+</div>
+</div>
+<div class="container py-5">
+<form action="{{route('contact.send')}}" method="POST">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" name="nome" aria-describedby="nome" placeholder="Seu Nome">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" name="email" aria-describedby="email" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label>Telefone</label>
+    <input type="text" class="form-control" name="telefone" aria-describedby="telefone" placeholder="Seu Telefone">
+  </div>
+  <div class="form-group">
+    <label>O que procura ?</label>
+    <input type="text" class="form-control" name="descricao" aria-describedby="descricao" placeholder="O que procura?">
+  </div>    
+  <button type="submit" class="btn btn-success" role="button">Submit</button>
+</form>
+</div>
   </main>
   <footer class="mastfoot mt-auto">
     <div class="inner">
@@ -182,3 +208,6 @@
 </div>
 </body>
 </html>
+
+
+
